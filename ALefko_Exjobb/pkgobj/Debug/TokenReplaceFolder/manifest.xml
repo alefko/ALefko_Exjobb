@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="2f98ebbf-910b-4181-a53f-dde6fbe934a9" SharePointProductVersion="15.0">
+  <FeatureManifests>
+    <FeatureManifest Location="ALefko_Exjobb_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
