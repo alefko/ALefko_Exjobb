@@ -1,3 +1,0 @@
-c:\users\devel\documents\visual studio 2013\Projects\ALefko_Exjobb\ALefko_Exjobb\bin\Debug\ALefko_Exjobb.pdb
-c:\users\devel\documents\visual studio 2013\Projects\ALefko_Exjobb\ALefko_Exjobb\obj\Debug\ALefko_Exjobb.dll
-c:\users\devel\documents\visual studio 2013\Projects\ALefko_Exjobb\ALefko_Exjobb\obj\Debug\ALefko_Exjobb.pdb
