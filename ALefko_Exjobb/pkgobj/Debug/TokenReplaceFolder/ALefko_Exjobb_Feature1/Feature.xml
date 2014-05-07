@@ -3,6 +3,8 @@
   <ElementManifests>
     <ElementManifest Location="Pages\Elements.xml" />
     <ElementFile Location="Pages\Default.aspx" />
+    <ElementFile Location="Pages\index.html" />
+    <ElementFile Location="Pages\Partials\Partial1.html" />
     <ElementManifest Location="Scripts\Elements.xml" />
     <ElementFile Location="Scripts\App_Start\App.js" />
     <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
@@ -16,13 +18,15 @@
     <ElementFile Location="Scripts\angular-route.min.js.map" />
     <ElementFile Location="Scripts\angular-route.min.js" />
     <ElementFile Location="Scripts\angular-route.js" />
-    <ElementFile Location="Scripts\Controllers\welcomeController.js" />
-    <ElementFile Location="Scripts\Factories\welcomeFactory.js" />
+    <ElementFile Location="Scripts\Controllers\startController.js" />
+    <ElementFile Location="Scripts\Factories\startFactory.js" />
     <ElementFile Location="Scripts\Factories\sharePointFactory.js" />
     <ElementManifest Location="Content\Elements.xml" />
     <ElementFile Location="Content\App.css" />
     <ElementManifest Location="Images\Elements.xml" />
     <ElementFile Location="Images\AppIcon.png" />
+    <ElementManifest Location="MasterPages\Elements.xml" />
+    <ElementFile Location="MasterPages\Sample.txt" />
   </ElementManifests>
   <UpgradeActions>
     <VersionRange>
@@ -31,6 +35,7 @@
         <ElementManifest Location="Scripts\Elements.xml" />
         <ElementManifest Location="Content\Elements.xml" />
         <ElementManifest Location="Images\Elements.xml" />
+        <ElementManifest Location="MasterPages\Elements.xml" />
       </ApplyElementManifests>
     </VersionRange>
   </UpgradeActions>

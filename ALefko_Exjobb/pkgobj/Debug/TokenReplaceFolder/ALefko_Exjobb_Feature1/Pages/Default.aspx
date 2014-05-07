@@ -24,11 +24,11 @@
     <script type="text/javascript" src="../Scripts/App_Start/App.js"></script>
     
     <!--AngularJS Factories -->
-    <script src="../Scripts/Factories/welcomeFactory.js"></script>
+    <script src="../Scripts/Factories/startFactory.js"></script>
     <script src="../Scripts/Factories/sharePointFactory.js"></script>
 
     <!-- AngularJS Controllers -->
-    <script src="../Scripts/Controllers/welcomeController.js"></script>
+    <script src="../Scripts/Controllers/startController.js"></script>
     
     
     
@@ -51,7 +51,9 @@
     
     <div data-ng-app="mainApp">
         
-        <label data-ng-controller="startController">{{ helloWorld }}</label>
+        <div data-ng-view=""></div>
+        
+
     </div>
 
 </asp:Content>

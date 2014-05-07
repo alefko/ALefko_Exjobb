@@ -1,4 +1,4 @@
-﻿mainApp.factory('welcomeFactory', function() {
+﻿mainApp.factory('startFactory', function() {
     var textToReturn = "Hello World";
 
     var factory = {};

@@ -41,10 +41,15 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="MasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fdfe9033-e31e-4211-b6c2-57a9d290e64f}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{c8a1781a-c8a3-4245-93e1-2e4bea0464a7}</SharePointProjectItemId>
     </None>
+    <Content Include="MasterPages\Elements.xml" />
+    <Content Include="MasterPages\Sample.txt" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
   </ItemGroup>
@@ -55,6 +60,8 @@
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{50831c9e-0b69-4ad4-b686-938b8e642515}</SharePointProjectItemId>
     </None>
+    <Content Include="Pages\index.html" />
+    <Content Include="Pages\Partials\Partial1.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

@@ -1,4 +1,4 @@
-﻿mainApp.factory('sharePointFactory', function() {
+﻿mainApp.factory('sharePointFactory', function () {
 
     var factory = {};
 
@@ -7,9 +7,6 @@
         var appWebUrl;
         var context;
         var newSubsite;
-
-        
-        
 
         try {
             hostWebUrl = GetQueryString("SPHostUrl");

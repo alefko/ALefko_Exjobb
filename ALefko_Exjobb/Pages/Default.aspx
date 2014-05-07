@@ -51,7 +51,8 @@
     
     <div data-ng-app="mainApp">
         
-        <label data-ng-controller="startController">{{ helloWorld }}</label>
+        <div data-ng-view=""></div>
+        
 
     </div>
 

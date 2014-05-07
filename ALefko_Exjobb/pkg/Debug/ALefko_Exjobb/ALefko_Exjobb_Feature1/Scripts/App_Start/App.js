@@ -27,4 +27,19 @@ function onGetUserNameFail(sender, args) {
 
 var mainApp = angular.module('mainApp', ['ngRoute']);
 
+mainApp.config(function($routeProvider) {
+    $routeProvider
+        .when('/',
+            {
+                controller: 'startController',
+                templateUrl: 'index.html'
+            })
+        .when('/appinitdone',
+            {
+                controller: 'startController',
+                templateUrl: 'Partials/Partial1.html'
+            })
+        .otherwise({ redirectTo: '/' });
+});
+
 
