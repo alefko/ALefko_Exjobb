@@ -2,6 +2,11 @@
 
     var factory = {};
 
+    var hostWebUrl;
+    var appWebUrl;
+    var context;
+    var newSubsite;
+
     factory.GetQueryString = function getQueryString(name) {
         name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -9,62 +14,40 @@
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
-    factory.createSubsite = function() {
-        var hostWebUrl;
-        var appWebUrl;
-        var context;
-        var newSubsite;
+    try {
+        hostWebUrl = factory.GetQueryString("SPHostUrl");
+        appWebUrl = factory.GetQueryString("SPAppWebUrl");
 
-        try {
-            hostWebUrl = factory.GetQueryString("SPHostUrl");
-            appWebUrl = factory.GetQueryString("SPAppWebUrl");
-
-            var layoutsRoot = hostWebUrl + '/_layouts/15/';
-
-            $.getScript(layoutsRoot + "SP.Runtime.js", function () {
-
-                $.getScript(layoutsRoot + "SP.js", CreateSubsite);
-            });
-
-        }
-        catch (ex) {
-            alert("message" + ex.message);
-        }
+        var layoutsRoot = hostWebUrl + '/_layouts/15/';
         
+    }
+    catch (ex) {
+        alert("message" + ex.message);
+    }
 
+    factory.createSubsite = function (siteDescription, siteTitle, siteUrl) {
 
-        //function GetQueryString(name) {
-        //    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        //    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        //    results = regex.exec(location.search);
-        //    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        //}
+        context = new SP.ClientContext(appWebUrl);
 
-        // Function to create subsite
+        var hostContext = new SP.AppContextSite(context, hostWebUrl);
 
-        function CreateSubsite() {
+        var webCreateInfo = new SP.WebCreationInformation();
+        //set values
+        webCreateInfo.set_description(siteDescription);
+        webCreateInfo.set_language(1033);
+        webCreateInfo.set_title(siteTitle);
+        webCreateInfo.set_url(siteUrl);
+        webCreateInfo.set_useSamePermissionsAsParentSite(true);
+        webCreateInfo.set_webTemplate("STS#0");
 
-            context = new SP.ClientContext(appWebUrl);
+        this.web = hostContext.get_web();
 
-            var hostContext = new SP.AppContextSite(context, hostWebUrl);
+        newSubsite = this.web.get_webs().add(webCreateInfo);
+        context.load(newSubsite);
 
-            var webCreateInfo = new SP.WebCreationInformation();
-            //set values
-            webCreateInfo.set_description("New Subsite Created");
-            webCreateInfo.set_language(1033);
-            webCreateInfo.set_title("NewSubSite");
-            webCreateInfo.set_url("SubsiteURL");
-            webCreateInfo.set_useSamePermissionsAsParentSite(true);
-            webCreateInfo.set_webTemplate("STS#0");
+        context.executeQueryAsync(
+                Function.createDelegate(this, successHandler), Function.createDelegate(this, errorHandler));
 
-            this.web = hostContext.get_web();
-
-            newSubsite = this.web.get_webs().add(webCreateInfo);
-            context.load(newSubsite);
-
-            context.executeQueryAsync(
-                    Function.createDelegate(this, successHandler), Function.createDelegate(this, errorHandler));
-        }
 
         function successHandler() {
             alert("subsite created successfully");
