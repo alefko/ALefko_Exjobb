@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SharePointSiteUrl>https://alefko.sharepoint.com/sites/devel/</SharePointSiteUrl>
+    <SharePointSiteUrl>https://alefko.sharepoint.com/sites/devel2/</SharePointSiteUrl>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
         <ProjectStore>
-          <AppInstancePackageModifiedTime>2014-05-07T13:03:42.4745058Z</AppInstancePackageModifiedTime>
-          <AppInstanceId>83c198f3-2890-4d78-8559-b1f6d9bd39a3</AppInstanceId>
+          <AppInstancePackageModifiedTime>2014-05-08T13:27:09.2553323Z</AppInstancePackageModifiedTime>
+          <AppInstanceId>8e3bd6bb-00ec-469e-89c2-435be548ff3c</AppInstanceId>
         </ProjectStore>
       </FlavorProperties>
     </VisualStudio>

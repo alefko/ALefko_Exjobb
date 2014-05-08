@@ -2,6 +2,13 @@
 
     var factory = {};
 
+    factory.GetQueryString = function getQueryString(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
     factory.createSubsite = function() {
         var hostWebUrl;
         var appWebUrl;
@@ -9,8 +16,8 @@
         var newSubsite;
 
         try {
-            hostWebUrl = GetQueryString("SPHostUrl");
-            appWebUrl = GetQueryString("SPAppWebUrl");
+            hostWebUrl = factory.GetQueryString("SPHostUrl");
+            appWebUrl = factory.GetQueryString("SPAppWebUrl");
 
             var layoutsRoot = hostWebUrl + '/_layouts/15/';
 
@@ -26,12 +33,12 @@
         
 
 
-        function GetQueryString(name) {
-            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
+        //function GetQueryString(name) {
+        //    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        //    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        //    results = regex.exec(location.search);
+        //    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        //}
 
         // Function to create subsite
 
