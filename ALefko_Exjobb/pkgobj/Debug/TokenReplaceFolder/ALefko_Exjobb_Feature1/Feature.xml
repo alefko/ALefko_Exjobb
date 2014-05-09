@@ -29,6 +29,7 @@
     <ElementFile Location="App\Pages\Default.aspx" />
     <ElementFile Location="App\Pages\Partials\Partial1.html" />
     <ElementFile Location="App\Pages\index.html" />
+    <ElementFile Location="App\Scripts\Factories\loggerFactory.js" />
   </ElementManifests>
   <UpgradeActions>
     <VersionRange>

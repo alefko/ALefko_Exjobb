@@ -10,5 +10,6 @@
     <ProjectItemFile Source="Pages\Default.aspx" Target="App\Pages\" Type="ElementFile" />
     <ProjectItemFile Source="Pages\Partials\Partial1.html" Target="App\Pages\Partials\" Type="ElementFile" />
     <ProjectItemFile Source="Pages\index.html" Target="App\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Scripts\Factories\loggerFactory.js" Target="App\Scripts\Factories\" Type="ElementFile" />
   </Files>
 </ProjectItem>

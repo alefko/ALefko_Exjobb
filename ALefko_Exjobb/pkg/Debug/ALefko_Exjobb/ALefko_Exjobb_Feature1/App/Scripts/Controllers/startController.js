@@ -1,6 +1,8 @@
 ﻿'use strict';
 
-mainApp.controller('startController', function ($scope, startFactory, sharePointFactory) {
+mainApp.controller('startController', function ($scope, startFactory, sharePointFactory, loggerFactory) {
+
+   
 
     // ---------------- $scope Functions ----------------
     $scope.buttonOk = buttonOk;
@@ -21,6 +23,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
     // ---------------- Functions ----------------
 
     function initApp() {
+        loggerFactory.log('Initilazation of App started');
         var dfd = $.Deferred();
 
         $.when(
@@ -59,21 +62,53 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         $scope.buttonOkIsDisabled = true;
         $scope.buttonOkText = "Processing";
 
+        //var workingOnItDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose(SP.Res.dialogLoading15);
+        var workingOnItDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose('Initializing App', 'Grab a coffee while we do awesome work for you', 150, 530);
+
+        //var waitDialog;
+
+        //function RequestEnded(sender, args) {
+        //    try {
+        //        waitDialog.close();
+        //        waitDialog = null;
+        //    } catch (ex) { }
+        //};
+
+        //function RequestStarted(sender, args) {
+        //    ShowWaitDialog();
+        //    //ExecuteOrDelayUntilScriptLoaded(ShowWaitDialog, "sp.js");
+        //};
+
+        //function ShowWaitDialog() {
+        //    try {
+        //        //if (waitDialog == null) {
+        //            waitDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose('Processing...', 'Please wait while request is in progress...', 76, 330);
+        //       // }
+        //    } catch (ex) { }
+        //};
+
+        //RequestStarted();
+
         initApp().then(
             function() {
                 //alert('App Initilazation was Successfull');
                 $scope.buttonOkIsDisabled = true;
                 $scope.buttonOkText = "Done";
                 $scope.$apply();
+                loggerFactory.log('Initilazation of App: DONE');
             },
             function () {
                 $scope.buttonOkIsDisabled = false;
                 $scope.buttonOkText = "OK";
                 //alert('App initilazation Failed');
                 $scope.$apply();
-
-            });
-
+                
+                loggerFactory.log('Initilazation of App: Failed');
+            })
+        .always(
+        function() {
+            workingOnItDialog.close();
+        });
     }
 
 });
