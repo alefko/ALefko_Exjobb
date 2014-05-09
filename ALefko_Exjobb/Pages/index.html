@@ -4,10 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <title>index</title>
+    <link href="../Content/App.css" rel="stylesheet" />
 </head>
 <body>
-    <label>index</label>
-    <br />
-    <a href="#/appinitdone">App Init Done</a>
+    
+    <div class="centerDiv">
+        <label>Press  the OK button to initialize the App</label>
+        <br /><br />
+
+        <button  class="buttonToRight" type="button" data-ng-click="buttonOk()" data-ng-disabled="buttonOkIsDisabled">OK</button>
+    </div>
+
 </body>
 </html>

@@ -1,15 +1,26 @@
 ﻿mainApp.controller('startController', function ($scope, startFactory, sharePointFactory) {
 
-    $(document).ready(
-        function() {
-            init();
-        }
-    );
+    // ---------------- $scope Functions ----------------
+    $scope.buttonOk = buttonOk;
+    $scope.buttonOkIsDisabled = false;
 
-    function init() {
-        $scope.createSubsite = sharePointFactory.createSubsite("New Subsite Created4", "NewSubSite4", "SubsiteURL4");
+   
+    // ---------------- Functions ----------------
+
+    function initApp() {
+        sharePointFactory.createSubsite("New Subsite Created", "NewSubSite", "SubsiteURL");
     }
 
-    $scope.helloWorld = startFactory.getText();
+    function buttonOkDisable() {
+        $scope.buttonOkIsDisabled = true;
+    }
+
+    function buttonOk() {
+        initApp();
+        //alert();
+        buttonOkDisable();
+
+        
+    }
 
 });

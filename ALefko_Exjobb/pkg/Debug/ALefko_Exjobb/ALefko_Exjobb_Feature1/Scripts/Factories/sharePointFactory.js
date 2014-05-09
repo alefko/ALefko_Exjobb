@@ -19,7 +19,7 @@
         appWebUrl = factory.GetQueryString("SPAppWebUrl");
 
         var layoutsRoot = hostWebUrl + '/_layouts/15/';
-        
+
     }
     catch (ex) {
         alert("message" + ex.message);
