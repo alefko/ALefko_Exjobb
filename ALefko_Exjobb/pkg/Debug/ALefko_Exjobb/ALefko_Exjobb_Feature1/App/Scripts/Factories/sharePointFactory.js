@@ -56,14 +56,12 @@
         function successHandler() {
             //alert("subsite created successfully");
             loggerFactory.log('subsite created successfully');
-            //console.log("subsite created successfully");
             dfd.resolve();
         }
 
         function errorHandler(sender, args) {
-            alert("Could not complete cross-domain call: " + args.get_message());
+            //alert("Could not complete cross-domain call: " + args.get_message());
             loggerFactory.log("Could not complete cross-domain call: " + args.get_message());
-            //console.log(("Could not complete cross-domain call: " + args.get_message()));
             dfd.reject();
         }
 

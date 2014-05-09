@@ -27,7 +27,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         var dfd = $.Deferred();
 
         $.when(
-             sharePointFactory.createSubsite("New Subsite Created", "NewSubSite", "SubsiteURL")
+             sharePointFactory.createSubsite("Alefko Exjobb Documents", "Exjobb Documents", "exjdocuments")
             )
            .then(
                function () {
@@ -62,9 +62,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         $scope.buttonOkIsDisabled = true;
         $scope.buttonOkText = "Processing";
 
-        //var workingOnItDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose(SP.Res.dialogLoading15);
         var workingOnItDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose('Initializing App', 'Grab a coffee while we do awesome work for you', 150, 530);
-
 
         initApp().then(
             function() {

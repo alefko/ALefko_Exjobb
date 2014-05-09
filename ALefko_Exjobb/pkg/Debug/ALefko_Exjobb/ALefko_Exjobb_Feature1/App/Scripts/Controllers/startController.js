@@ -27,7 +27,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         var dfd = $.Deferred();
 
         $.when(
-             sharePointFactory.createSubsite("New Subsite Created", "NewSubSite", "SubsiteURL")
+             sharePointFactory.createSubsite("Alefko Exjobb Documents", "ExjDocuments", "exjdocuments")
             )
            .then(
                function () {
@@ -62,32 +62,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         $scope.buttonOkIsDisabled = true;
         $scope.buttonOkText = "Processing";
 
-        //var workingOnItDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose(SP.Res.dialogLoading15);
         var workingOnItDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose('Initializing App', 'Grab a coffee while we do awesome work for you', 150, 530);
-
-        //var waitDialog;
-
-        //function RequestEnded(sender, args) {
-        //    try {
-        //        waitDialog.close();
-        //        waitDialog = null;
-        //    } catch (ex) { }
-        //};
-
-        //function RequestStarted(sender, args) {
-        //    ShowWaitDialog();
-        //    //ExecuteOrDelayUntilScriptLoaded(ShowWaitDialog, "sp.js");
-        //};
-
-        //function ShowWaitDialog() {
-        //    try {
-        //        //if (waitDialog == null) {
-        //            waitDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose('Processing...', 'Please wait while request is in progress...', 76, 330);
-        //       // }
-        //    } catch (ex) { }
-        //};
-
-        //RequestStarted();
 
         initApp().then(
             function() {
