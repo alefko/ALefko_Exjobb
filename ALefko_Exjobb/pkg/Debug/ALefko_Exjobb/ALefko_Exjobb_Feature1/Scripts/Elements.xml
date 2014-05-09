@@ -15,6 +15,5 @@
     <File Path="Scripts\angular-route.js" Url="Scripts/angular-route.js" ReplaceContent="TRUE" />
     <File Path="Scripts\Controllers\startController.js" Url="Scripts/Controllers/startController.js" ReplaceContent="TRUE" />
     <File Path="Scripts\Factories\startFactory.js" Url="Scripts/Factories/startFactory.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\Factories\sharePointFactory.js" Url="Scripts/Factories/sharePointFactory.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

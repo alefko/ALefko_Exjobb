@@ -20,13 +20,15 @@
     <ElementFile Location="Scripts\angular-route.js" />
     <ElementFile Location="Scripts\Controllers\startController.js" />
     <ElementFile Location="Scripts\Factories\startFactory.js" />
-    <ElementFile Location="Scripts\Factories\sharePointFactory.js" />
     <ElementManifest Location="Content\Elements.xml" />
     <ElementFile Location="Content\App.css" />
     <ElementManifest Location="Images\Elements.xml" />
     <ElementFile Location="Images\AppIcon.png" />
     <ElementManifest Location="MasterPages\Elements.xml" />
     <ElementFile Location="MasterPages\Sample.txt" />
+    <ElementManifest Location="LogInstance\Elements.xml" />
+    <ElementManifest Location="Log\Elements.xml" />
+    <ElementFile Location="Log\Schema.xml" />
   </ElementManifests>
   <UpgradeActions>
     <VersionRange>
@@ -36,6 +38,8 @@
         <ElementManifest Location="Content\Elements.xml" />
         <ElementManifest Location="Images\Elements.xml" />
         <ElementManifest Location="MasterPages\Elements.xml" />
+        <ElementManifest Location="LogInstance\Elements.xml" />
+        <ElementManifest Location="Log\Elements.xml" />
       </ApplyElementManifests>
     </VersionRange>
   </UpgradeActions>

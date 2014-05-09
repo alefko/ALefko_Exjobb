@@ -18,7 +18,7 @@
     function buttonOk() {
         initApp();
         //alert();
-        //buttonOkDisable();
+        buttonOkDisable();
 
         
     }
