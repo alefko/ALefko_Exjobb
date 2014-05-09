@@ -21,7 +21,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
     // ---------------- Functions ----------------
 
     function initApp() {
-        var dfd = $.Deferred;
+        var dfd = $.Deferred();
 
         $.when(
              sharePointFactory.createSubsite("New Subsite Created", "NewSubSite", "SubsiteURL")
@@ -30,36 +30,46 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
                function () {
                    alert('Promise fullfilled');
                    hasBeenInitialized = true;
-                   //dfd.resolve();
+                   dfd.resolve();
                },
                function () {
                    alert('Promise Failed');
                    hasBeenInitialized = true;
-                   //dfd.reject();
+                   dfd.reject();
                });
-        executeQueryAsync(Function.createDelegate(success(), fail()));
+        context.executeQueryAsync(Function.createDelegate(this, function(){}), Function.createDelegate(this, function (){}));
 
         function success() {
             alert('inside sucess');
-            dfd.resolve();
+            //dfd.resolve();
         }
 
         function fail() {
             alert('inside fail');
-            dfd.reject();
+            //dfd.reject();
         }
-        
-        
+
+        return dfd.promise();
+
+
     }
 
     function buttonOk() {
 
+        $scope.buttonOkIsDisabled = true;
+        $scope.buttonOkText = "Processing";
+
         initApp().then(
             function() {
-                alert(hasBeenInitialized);
+                alert('App Initilazation was Successfull');
+                $scope.buttonOkIsDisabled = true;
+                $scope.buttonOkText = "Done";
             },
-            function() {
-                alert(hasBeenInitialized);
+            function () {
+                $scope.buttonOkIsDisabled = false;
+                $scope.buttonOkText = "why";
+                alert('App initilazation Failed');
+                
             });
 
     }

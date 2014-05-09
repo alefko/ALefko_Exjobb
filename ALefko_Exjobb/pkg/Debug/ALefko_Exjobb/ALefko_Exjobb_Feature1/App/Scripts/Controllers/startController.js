@@ -21,7 +21,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
     // ---------------- Functions ----------------
 
     function initApp() {
-        var dfd = $.Deferred;
+        var dfd = $.Deferred();
 
         $.when(
              sharePointFactory.createSubsite("New Subsite Created", "NewSubSite", "SubsiteURL")
@@ -30,36 +30,38 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
                function () {
                    alert('Promise fullfilled');
                    hasBeenInitialized = true;
-                   //dfd.resolve();
+                   dfd.resolve();
                },
                function () {
                    alert('Promise Failed');
                    hasBeenInitialized = true;
-                   //dfd.reject();
+                   dfd.reject();
                });
-        executeQueryAsync(Function.createDelegate(success(), fail()));
+        context.executeQueryAsync(Function.createDelegate(this, success()), Function.createDelegate(this, fail()));
 
         function success() {
             alert('inside sucess');
-            dfd.resolve();
+            //dfd.resolve();
         }
 
         function fail() {
             alert('inside fail');
-            dfd.reject();
+            //dfd.reject();
         }
-        
-        
+
+        return dfd.promise();
+
+
     }
 
     function buttonOk() {
 
         initApp().then(
             function() {
-                alert(hasBeenInitialized);
+                alert('App Intilazation done');
             },
-            function() {
-                alert(hasBeenInitialized);
+            function () {
+                alert('App initilazation Failed');
             });
 
     }
