@@ -1,5 +1,7 @@
 ﻿mainApp.factory('sharePointFactory', function () {
 
+    
+
     var factory = {};
 
     var hostWebUrl;
@@ -27,6 +29,8 @@
 
     factory.createSubsite = function (siteDescription, siteTitle, siteUrl) {
 
+        var dfd = $.Deferred();
+
         context = new SP.ClientContext(appWebUrl);
 
         var hostContext = new SP.AppContextSite(context, hostWebUrl);
@@ -51,11 +55,15 @@
 
         function successHandler() {
             alert("subsite created successfully");
+            dfd.resolve();
         }
 
         function errorHandler(sender, args) {
             alert("Could not complete cross-domain call: " + args.get_message());
+            dfd.reject();
         }
+
+        return dfd.promise();
     }
 
     return factory;

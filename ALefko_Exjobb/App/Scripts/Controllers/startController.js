@@ -1,0 +1,67 @@
+﻿'use strict';
+
+mainApp.controller('startController', function ($scope, startFactory, sharePointFactory) {
+
+    // ---------------- $scope Functions ----------------
+    $scope.buttonOk = buttonOk;
+    $scope.buttonOkIsDisabled = false;
+    $scope.buttonOkText = "OK";
+
+    var hasBeenInitialized = false;
+
+    if (!hasBeenInitialized) {
+        $scope.buttonOkText = 'OK';
+        $scope.buttonOkIsDisabled = false;
+    } 
+    else {
+        $scope.buttonOkIsDisabled = true;
+        $scope.buttonOkText = 'Done';
+    }
+   
+    // ---------------- Functions ----------------
+
+    function initApp() {
+        var dfd = $.Deferred;
+
+        $.when(
+             sharePointFactory.createSubsite("New Subsite Created", "NewSubSite", "SubsiteURL")
+            )
+           .then(
+               function () {
+                   alert('Promise fullfilled');
+                   hasBeenInitialized = true;
+                   //dfd.resolve();
+               },
+               function () {
+                   alert('Promise Failed');
+                   hasBeenInitialized = true;
+                   //dfd.reject();
+               });
+        executeQueryAsync(Function.createDelegate(success(), fail()));
+
+        function success() {
+            alert('inside sucess');
+            dfd.resolve();
+        }
+
+        function fail() {
+            alert('inside fail');
+            dfd.reject();
+        }
+        
+        
+    }
+
+    function buttonOk() {
+
+        initApp().then(
+            function() {
+                alert(hasBeenInitialized);
+            },
+            function() {
+                alert(hasBeenInitialized);
+            });
+
+    }
+
+});

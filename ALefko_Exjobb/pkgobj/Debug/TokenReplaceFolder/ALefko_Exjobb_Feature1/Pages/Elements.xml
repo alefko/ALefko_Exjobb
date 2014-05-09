@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Pages">
-    <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
-    <File Path="Pages\index.html" Url="Pages/index.html" ReplaceContent="TRUE" />
-    <File Path="Pages\Partials\Partial1.html" Url="Pages/Partials/Partial1.html" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -8,27 +8,30 @@
 
 <%-- The markup and script in the following Content element will be placed in the <head> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
-    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
     <script type="text/javascript" src="/_layouts/15/sp.js"></script>
     <meta name="WebPartPageExpansion" content="full" />
 
     <!-- Add your CSS styles to the following file -->
-    <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
+    <link rel="Stylesheet" type="text/css" href="../../Content/App.css" />
     
     <!-- AngularJS -->
-    <script src="../Scripts/angular.js"></script>
-    <script src="../Scripts/angular-route.js"></script>
+    <script src="../../Scripts/angular.js"></script>
+    <script src="../../Scripts/angular-route.js"></script>
+    
+    <!-- Ajax -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 
     <!-- Add your JavaScript to the following file -->
     <script type="text/javascript" src="../Scripts/App_Start/App.js"></script>
     
     <!--AngularJS Factories -->
-    <script src="../Scripts/Factories/startFactory.js"></script>
-    <script src="../Scripts/Factories/sharePointFactory.js"></script>
+    <script type="text/javascript" src="../Scripts/Factories/startFactory.js"></script>
+    <script type="text/javascript" src="../Scripts/Factories/sharePointFactory.js"></script>
 
     <!-- AngularJS Controllers -->
-    <script src="../Scripts/Controllers/startController.js"></script>
+    <script type="text/javascript" src="../Scripts/Controllers/startController.js"></script>
     
     
     
