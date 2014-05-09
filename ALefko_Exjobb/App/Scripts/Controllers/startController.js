@@ -28,24 +28,24 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
             )
            .then(
                function () {
-                   alert('Promise fullfilled');
+                   //alert('Promise fullfilled');
                    hasBeenInitialized = true;
                    dfd.resolve();
                },
                function () {
-                   alert('Promise Failed');
+                   //alert('Promise Failed');
                    hasBeenInitialized = true;
                    dfd.reject();
                });
         context.executeQueryAsync(Function.createDelegate(this, function(){}), Function.createDelegate(this, function (){}));
 
         function success() {
-            alert('inside sucess');
+            //alert('inside sucess');
             //dfd.resolve();
         }
 
         function fail() {
-            alert('inside fail');
+            //alert('inside fail');
             //dfd.reject();
         }
 
@@ -61,15 +61,17 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
 
         initApp().then(
             function() {
-                alert('App Initilazation was Successfull');
+                //alert('App Initilazation was Successfull');
                 $scope.buttonOkIsDisabled = true;
                 $scope.buttonOkText = "Done";
+                $scope.$apply();
             },
             function () {
                 $scope.buttonOkIsDisabled = false;
-                $scope.buttonOkText = "why";
-                alert('App initilazation Failed');
-                
+                $scope.buttonOkText = "OK";
+                //alert('App initilazation Failed');
+                $scope.$apply();
+
             });
 
     }
