@@ -32,7 +32,8 @@ mainApp.config(function($routeProvider) {
         .when('/',
             {
                 controller: 'startController',
-                templateUrl: 'index.html'
+                //templateUrl: 'Page1.aspx?IsDlg=1'
+                templateUrl: 'Page2.aspx'
             })
         .when('/appinitdone',
             {
