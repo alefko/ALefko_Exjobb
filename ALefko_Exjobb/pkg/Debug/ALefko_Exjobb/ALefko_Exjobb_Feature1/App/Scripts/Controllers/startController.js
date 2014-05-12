@@ -27,7 +27,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         var dfd = $.Deferred();
 
         $.when(
-             sharePointFactory.createSubsite("Alefko Exjobb Documents", "ExjDocuments", "exjdocuments")
+             sharePointFactory.createSubsite("Alefko Exjobb Documents", "Exjobb Documents", "exjdocuments")
             )
            .then(
                function () {
@@ -40,17 +40,17 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
                    hasBeenInitialized = true;
                    dfd.reject();
                });
-        context.executeQueryAsync(Function.createDelegate(this, function(){}), Function.createDelegate(this, function (){}));
+        //context.executeQueryAsync(Function.createDelegate(this, function(){}), Function.createDelegate(this, function (){}));
 
-        function success() {
-            //alert('inside sucess');
-            //dfd.resolve();
-        }
+        //function success() {
+        //    //alert('inside sucess');
+        //    //dfd.resolve();
+        //}
 
-        function fail() {
-            //alert('inside fail');
-            //dfd.reject();
-        }
+        //function fail() {
+        //    //alert('inside fail');
+        //    //dfd.reject();
+        //}
 
         return dfd.promise();
 
