@@ -12,7 +12,6 @@
     <ProjectItemFile Source="Pages\index.html" Target="App\Pages\" Type="ElementFile" />
     <ProjectItemFile Source="Scripts\Factories\loggerFactory.js" Target="App\Scripts\Factories\" Type="ElementFile" />
     <ProjectItemFile Source="Pages\Page1.aspx" Target="App\Pages\" Type="ElementFile" />
-    <ProjectItemFile Source="Pages\ClientWebPart2.aspx" Target="App\Pages\" Type="ElementFile" />
     <ProjectItemFile Source="Pages\Page2.aspx" Target="App\Pages\" Type="ElementFile" />
   </Files>
 </ProjectItem>

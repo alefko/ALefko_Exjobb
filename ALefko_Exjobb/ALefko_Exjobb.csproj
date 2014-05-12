@@ -71,7 +71,6 @@
     <Content Include="App\Scripts\Factories\loggerFactory.js" />
     <Content Include="MasterPages\Elements.xml" />
     <Content Include="MasterPages\Sample.txt" />
-    <Content Include="App\Pages\ClientWebPart2.aspx" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="App\Pages\Default.aspx" />
   </ItemGroup>

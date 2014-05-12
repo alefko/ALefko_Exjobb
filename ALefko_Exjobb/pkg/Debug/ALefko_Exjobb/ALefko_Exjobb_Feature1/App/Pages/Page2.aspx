@@ -10,7 +10,7 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
     
 <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" 
-ID="full4" Title="loc:full" >
+ID="mywebPart" Title="loc:full" >
 <WebPartPages:XsltListViewWebPart ID="XsltListViewWebPart4" 
 runat="server" ListUrl="_layouts/15/start.aspx#/Shared%20Documents/Forms/AllItems.aspx" IsIncluded="True" 
 NoDefaultStyle="TRUE" Title="TestCustomList2" PageType="PAGE_NORMALVIEW" 

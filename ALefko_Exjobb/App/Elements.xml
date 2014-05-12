@@ -11,7 +11,6 @@
     <File Path="App\Pages\index.html" Url="App/Pages/index.html" ReplaceContent="TRUE" />
     <File Path="App\Scripts\Factories\loggerFactory.js" Url="App/Scripts/Factories/loggerFactory.js" ReplaceContent="TRUE" />
     <File Path="App\Pages\Page1.aspx" Url="App/Pages/Page1.aspx" ReplaceContent="TRUE" />
-    <File Path="App\Pages\ClientWebPart2.aspx" Url="App/Pages/ClientWebPart2.aspx" ReplaceContent="TRUE" />
     <File Path="App\Pages\Page2.aspx" Url="App/Pages/Page2.aspx" ReplaceContent="TRUE" />
   </Module>
 </Elements>
