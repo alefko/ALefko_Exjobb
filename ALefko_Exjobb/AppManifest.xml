@@ -8,13 +8,13 @@
 >
   <Properties>
     <Title>ALefko_Exjobb</Title>
-    <StartPage>~appWebUrl/App/Pages/Default.aspx?{StandardTokens}</StartPage>
+    <StartPage>~appWebUrl/App/Pages/index2.html?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
     <Internal />
   </AppPrincipal>
   <AppPermissionRequests AllowAppOnlyPolicy="true" >
-    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
   </AppPermissionRequests>
 </App>

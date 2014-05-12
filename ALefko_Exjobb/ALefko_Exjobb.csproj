@@ -41,14 +41,8 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="App\Artifacts\Lists\EXJDocuments\EXJDocumentsInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{e9efd56a-6cbe-492c-b7c1-56c12aa19381}</SharePointProjectItemId>
-    </None>
-    <None Include="App\Artifacts\Lists\EXJDocuments\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{aa74e2ae-8173-424f-bc42-3300e1c86741}</SharePointProjectItemId>
-    </None>
-    <None Include="App\Pages\Partials\ClientWebPart1\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{4e840d63-6037-4152-af10-e6efd043922a}</SharePointProjectItemId>
+    <None Include="App\Artifacts\Lists\EXJDocs\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{96b9b2e3-4aae-4b13-96dd-2d55ad6fcdd8}</SharePointProjectItemId>
     </None>
     <None Include="App\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{2c409920-2d48-46ce-9318-050a2d97c49b}</SharePointProjectItemId>
@@ -60,23 +54,22 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{c8a1781a-c8a3-4245-93e1-2e4bea0464a7}</SharePointProjectItemId>
     </None>
-    <Content Include="App\Artifacts\Lists\EXJDocuments\EditDlg.htm" />
-    <Content Include="App\Artifacts\Lists\EXJDocuments\Elements.xml" />
-    <Content Include="App\Artifacts\Lists\EXJDocuments\EXJDocumentsInstance\Elements.xml" />
-    <Content Include="App\Artifacts\Lists\EXJDocuments\FileDlg.htm" />
-    <Content Include="App\Artifacts\Lists\EXJDocuments\Repair.aspx" />
-    <Content Include="App\Artifacts\Lists\EXJDocuments\Schema.xml" />
-    <Content Include="App\Artifacts\Lists\EXJDocuments\Upload.aspx" />
-    <Content Include="App\Elements.xml" />
-    <Content Include="App\Pages\Partials\ClientWebPart1\Elements.xml">
-      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    <Content Include="App\Artifacts\Lists\EXJDocs\Elements.xml" />
+    <Content Include="App\Elements.xml">
+      <SubType>Designer</SubType>
     </Content>
+    <Content Include="App\Pages\Default2.aspx" />
+    <Content Include="App\Pages\index2.html" />
+    <Content Include="App\Pages\Partials\Page1.aspx" />
+    <Content Include="App\Pages\Partials\Page2.aspx" />
+    <Content Include="App\Pages\Partials\Page3.aspx" />
     <Content Include="App\Sample.txt" />
     <Content Include="App\Scripts\Factories\loggerFactory.js" />
     <Content Include="MasterPages\Elements.xml" />
     <Content Include="MasterPages\Sample.txt" />
-    <Content Include="Pages\ClientWebPart1.aspx" />
-    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App\Pages\Default.aspx" />
   </ItemGroup>
   <ItemGroup>

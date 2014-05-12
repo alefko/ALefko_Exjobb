@@ -40,17 +40,6 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
                    hasBeenInitialized = true;
                    dfd.reject();
                });
-        //context.executeQueryAsync(Function.createDelegate(this, function(){}), Function.createDelegate(this, function (){}));
-
-        //function success() {
-        //    //alert('inside sucess');
-        //    //dfd.resolve();
-        //}
-
-        //function fail() {
-        //    //alert('inside fail');
-        //    //dfd.reject();
-        //}
 
         return dfd.promise();
 
