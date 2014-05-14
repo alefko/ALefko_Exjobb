@@ -47,8 +47,9 @@ dwsApp.config(function ($routeProvider) {
     $routeProvider
         .when('/',
             {
-                controller: 'startController',
+                controller: 'dwsAppStartController',
                 templateUrl: 'dwsAppPartials/dwsAppWorkspace.aspx'
+                //templateUrl: 'index.html'
             })
         .when('/appinitdone',
             {

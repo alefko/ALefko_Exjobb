@@ -74,6 +74,7 @@
       <OpcRelationship>feature-elementmanifest</OpcRelationship>
     </Content>
     <Content Include="App\Sample.txt" />
+    <Content Include="App\Scripts\Controllers\dwsAppControllers\dwsAppStartController.js" />
     <Content Include="App\Scripts\Factories\loggerFactory.js" />
     <Content Include="MasterPages\Elements.xml" />
     <Content Include="MasterPages\Sample.txt" />
@@ -142,7 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\Artifacts\AppParts\" />
-    <Folder Include="App\Scripts\Controllers\dwsAppControllers\" />
     <Folder Include="App\Scripts\Factories\dwsAppFactories\" />
     <Folder Include="Scripts\App\Lists\" />
   </ItemGroup>

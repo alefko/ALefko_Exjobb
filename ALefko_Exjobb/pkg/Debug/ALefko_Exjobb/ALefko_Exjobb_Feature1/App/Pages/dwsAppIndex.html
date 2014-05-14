@@ -31,8 +31,28 @@
 
 </head>
 <body data-ng-app="dwsApp">
+    
+    <div>
+        <div data-ng-view></div>
+    </div>
+    
+    <!-- AngularJS -->
+    <script src="../../Scripts/angular.js"></script>
+    <script src="../../Scripts/angular-route.js"></script>
 
-    <div data-ng-view=""></div>
+    <!-- Ajax -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+    <!-- Add your JavaScript to the following file -->
+    <script type="text/javascript" src="../Scripts/App_Start/App.js"></script>
+
+    <!--AngularJS Factories -->
+    <script type="text/javascript" src="../Scripts/Factories/startFactory.js"></script>
+    <script type="text/javascript" src="../Scripts/Factories/sharePointFactory.js"></script>
+    <script type="text/javascript" src="../Scripts/Factories/loggerFactory.js"></script>
+
+    <!-- AngularJS Controllers -->
+    <script type="text/javascript" src="../Scripts/Controllers/dwsAppControllers/dwsAppStartController.js"></script>
 
 </body>
 </html>
