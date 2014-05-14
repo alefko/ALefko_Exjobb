@@ -33,7 +33,7 @@ mainApp.config(function($routeProvider) {
             {
                 controller: 'startController',
                 //templateUrl: 'Partials/Page3.aspx'
-                templateUrl: 'Default2.aspx'
+                templateUrl: 'index.html'
             })
         .when('/appinitdone',
             {

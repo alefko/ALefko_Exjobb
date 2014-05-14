@@ -10,10 +10,10 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     
     
-    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"> </script>
+    <%--<script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"> </script>
     <script type="text/javascript" src="/_layouts/15/MicrosoftAjax.js"></script>
     <script type="text/javascript" src="/_layouts/15/SP.Runtime.js"></script>
-    <script type="text/javascript" src="/_layouts/15/SP.js"></script>
+    <script type="text/javascript" src="/_layouts/15/SP.js"></script>--%>
     <script type="text/javascript" src="/_layouts/15/SP.UI.Dialog.js"></script>
 
     <meta name="WebPartPageExpansion" content="full" />
@@ -22,6 +22,7 @@
     <link rel="Stylesheet" type="text/css" href="../../Content/App.css" />
     
      <!-- AngularJS -->
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"> </script>
     <script src="../../Scripts/angular.js"></script>
     <script src="../../Scripts/angular-route.js"></script>
     
