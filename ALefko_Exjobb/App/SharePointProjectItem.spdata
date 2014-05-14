@@ -11,5 +11,7 @@
     <ProjectItemFile Source="Pages\Partials\Partial1.html" Target="App\Pages\Partials\" Type="ElementFile" />
     <ProjectItemFile Source="Pages\index.html" Target="App\Pages\" Type="ElementFile" />
     <ProjectItemFile Source="Scripts\Factories\loggerFactory.js" Target="App\Scripts\Factories\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\dwsAppIndex.html" Target="App\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\dwsAppPartials\dwsAppWorkspace.aspx" Target="App\Pages\dwsAppPartials\" Type="ElementFile" />
   </Files>
 </ProjectItem>

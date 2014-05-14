@@ -10,5 +10,7 @@
     <File Path="App\Pages\Partials\Partial1.html" Url="App/Pages/Partials/Partial1.html" ReplaceContent="TRUE" />
     <File Path="App\Pages\index.html" Url="App/Pages/index.html" ReplaceContent="TRUE" />
     <File Path="App\Scripts\Factories\loggerFactory.js" Url="App/Scripts/Factories/loggerFactory.js" ReplaceContent="TRUE" />
+    <File Path="App\Pages\dwsAppIndex.html" Url="App/Pages/dwsAppIndex.html" ReplaceContent="TRUE" />
+    <File Path="App\Pages\dwsAppPartials\dwsAppWorkspace.aspx" Url="App/Pages/dwsAppPartials/dwsAppWorkspace.aspx" ReplaceContent="TRUE" />
   </Module>
 </Elements>

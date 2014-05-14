@@ -27,7 +27,7 @@ mainApp.controller('startController', function ($scope, startFactory, sharePoint
         var dfd = $.Deferred();
 
         $.when(
-             sharePointFactory.createSubsite("Alefko Exjobb Documents", "ExjDocuments", "exjdocuments")
+             sharePointFactory.createSubsite("Alefko Exjobb Documents", "Exjobb Documents", "exjdocuments")
             )
            .then(
                function () {

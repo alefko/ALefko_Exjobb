@@ -31,6 +31,8 @@
     <ElementFile Location="App\Pages\Partials\Partial1.html" />
     <ElementFile Location="App\Pages\index.html" />
     <ElementFile Location="App\Scripts\Factories\loggerFactory.js" />
+    <ElementFile Location="App\Pages\dwsAppIndex.html" />
+    <ElementFile Location="App\Pages\dwsAppPartials\dwsAppWorkspace.aspx" />
     <ElementManifest Location="EXJDocumentsInstance\Elements.xml" />
     <ElementManifest Location="EXJDocuments\Elements.xml" />
     <ElementFile Location="EXJDocuments\Schema.xml" />
