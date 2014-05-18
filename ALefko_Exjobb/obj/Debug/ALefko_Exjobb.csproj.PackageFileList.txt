@@ -1,1 +1,0 @@
-bin\Debug\ALefko_Exjobb.wsp
