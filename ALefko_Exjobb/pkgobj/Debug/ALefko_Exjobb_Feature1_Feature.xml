@@ -2,6 +2,7 @@
 <Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="SharePoint App Feature" Id="0fc1c0ac-824e-48bf-861d-008b2fbdf477" Scope="Web" Title="ALefko_Exjobb Feature1" Version="1.0.0.0">
   <ElementManifests>
     <ElementManifest Location="Pages\Elements.xml" />
+    <ElementFile Location="Pages\ClientWebPart1.aspx" />
     <ElementManifest Location="Scripts\Elements.xml" />
     <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
     <ElementFile Location="Scripts\jquery-1.9.1.min.js" />
@@ -15,7 +16,6 @@
     <ElementFile Location="Scripts\angular-route.min.js" />
     <ElementFile Location="Scripts\angular-route.js" />
     <ElementManifest Location="Content\Elements.xml" />
-    <ElementFile Location="Content\App.css" />
     <ElementManifest Location="Images\Elements.xml" />
     <ElementFile Location="Images\AppIcon.png" />
     <ElementManifest Location="MasterPages\Elements.xml" />
@@ -30,9 +30,10 @@
     <ElementFile Location="App\Pages\Partials\Partial1.html" />
     <ElementFile Location="App\Pages\index.html" />
     <ElementFile Location="App\Scripts\Factories\loggerFactory.js" />
-    <ElementFile Location="App\Pages\Page1.aspx" />
-    <ElementFile Location="App\Pages\ClientWebPart2.aspx" />
-    <ElementFile Location="App\Pages\Page2.aspx" />
+    <ElementFile Location="App\Pages\dwsAppIndex.html" />
+    <ElementFile Location="App\Pages\dwsAppPartials\dwsAppWorkspace.aspx" />
+    <ElementFile Location="App\Scripts\Controllers\dwsAppControllers\dwsAppStartController.js" />
+    <ElementFile Location="App\CSS\App.css" />
     <ElementManifest Location="EXJDocumentsInstance\Elements.xml" />
     <ElementManifest Location="EXJDocuments\Elements.xml" />
     <ElementFile Location="EXJDocuments\Schema.xml" />
@@ -40,6 +41,9 @@
     <ElementFile Location="EXJDocuments\FileDlg.htm" />
     <ElementFile Location="EXJDocuments\Repair.aspx" />
     <ElementFile Location="EXJDocuments\Upload.aspx" />
+    <ElementManifest Location="UsersInstance\Elements.xml" />
+    <ElementManifest Location="Users\Elements.xml" />
+    <ElementFile Location="Users\Schema.xml" />
   </ElementManifests>
   <UpgradeActions>
     <VersionRange>
@@ -52,6 +56,8 @@
         <ElementManifest Location="App\Elements.xml" />
         <ElementManifest Location="EXJDocumentsInstance\Elements.xml" />
         <ElementManifest Location="EXJDocuments\Elements.xml" />
+        <ElementManifest Location="UsersInstance\Elements.xml" />
+        <ElementManifest Location="Users\Elements.xml" />
       </ApplyElementManifests>
     </VersionRange>
   </UpgradeActions>

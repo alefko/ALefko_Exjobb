@@ -16,7 +16,7 @@
     <meta name="WebPartPageExpansion" content="full" />
 
     <!-- Add your CSS styles to the following file -->
-    <link rel="Stylesheet" type="text/css" href="../../Content/App.css" />
+    <link rel="Stylesheet" type="text/css" href="../CSS/App.css" />
     
     <!-- AngularJS -->
     <script src="../../Scripts/angular.js"></script>

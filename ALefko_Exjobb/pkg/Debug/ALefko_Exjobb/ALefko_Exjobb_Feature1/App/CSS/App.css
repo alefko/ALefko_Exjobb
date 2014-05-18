@@ -10,3 +10,15 @@
 .buttonToRight {
     float: right;
 }
+
+.wrap {
+    width: 800px;
+    margin-left: 200px;
+}
+.documentLibrary {
+    float: left;
+}
+
+.users {
+    float: right;
+}
