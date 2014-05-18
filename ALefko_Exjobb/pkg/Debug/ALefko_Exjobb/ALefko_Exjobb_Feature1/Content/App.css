@@ -1,0 +1,12 @@
+﻿/* Place custom styles below */
+
+.centerDiv {
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.buttonToRight {
+    float: right;
+}

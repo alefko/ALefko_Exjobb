@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="App">
+    <File Path="App\Sample.txt" Url="App/Sample.txt" ReplaceContent="TRUE" />
+    <File Path="App\Scripts\App_Start\App.js" Url="App/Scripts/App_Start/App.js" ReplaceContent="TRUE" />
+    <File Path="App\Scripts\Factories\sharePointFactory.js" Url="App/Scripts/Factories/sharePointFactory.js" ReplaceContent="TRUE" />
+    <File Path="App\Scripts\Factories\startFactory.js" Url="App/Scripts/Factories/startFactory.js" ReplaceContent="TRUE" />
+    <File Path="App\Scripts\Controllers\startController.js" Url="App/Scripts/Controllers/startController.js" ReplaceContent="TRUE" />
+    <File Path="App\Pages\Default.aspx" Url="App/Pages/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="App\Pages\Partials\Partial1.html" Url="App/Pages/Partials/Partial1.html" ReplaceContent="TRUE" />
+    <File Path="App\Pages\index.html" Url="App/Pages/index.html" ReplaceContent="TRUE" />
+    <File Path="App\Scripts\Factories\loggerFactory.js" Url="App/Scripts/Factories/loggerFactory.js" ReplaceContent="TRUE" />
+    <File Path="App\Pages\dwsAppIndex.html" Url="App/Pages/dwsAppIndex.html" ReplaceContent="TRUE" />
+    <File Path="App\Pages\dwsAppPartials\dwsAppWorkspace.aspx" Url="App/Pages/dwsAppPartials/dwsAppWorkspace.aspx" ReplaceContent="TRUE">
+      <View List="Lists/EXJDocuments" BaseViewID="1" WebPartZoneID="WebPartZone" WebPartOrder="2">
+        <![CDATA[
+          <webParts>
+              <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                  <metaData>
+                      <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,
+                      Version=15.0.0.0,
+                      Culture=neutral,
+                      PublicKeyToken=71e9bce111e9429c" />
+                      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                  </metaData>
+                  <data>
+                      <properties>
+                          <property name="Title" type="string">Exjobb Documents</property>
+                          <property name="InplaceSearchEnabled" type="bool">True</property>
+                          <property name="ShowToolbarWithRibbon" type="bool">True</property>
+                      </properties>
+                  </data>
+              </webPart>
+          </webParts>
+      ]]>
+      </View>
+    </File>
+    <File Path="App\Scripts\Controllers\dwsAppControllers\dwsAppStartController.js" Url="App/Scripts/Controllers/dwsAppControllers/dwsAppStartController.js" ReplaceContent="TRUE" />
+    <File Path="App\CSS\App.css" Url="App/CSS/App.css" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
